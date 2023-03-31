@@ -14,7 +14,7 @@ function upload {
      
      RET=$?
      if [ "$RET" = 0 ]; then
-         echo "$FILEDIR/$FILENAME has been transferred to ANZ $REMOTE_SERVER:$REMOTEDIR" | tee -a $LOGFILE 2>&1
+         echo "$FILEDIR/$FILENAME has been transferred to $REMOTE_SERVER:$REMOTEDIR" | tee -a $LOGFILE 2>&1
          echo "Moving $FILEDIR/$FILENAME to archive location: $ARCHIVEDIR" | tee -a $LOGFILE 2>&1
          mv $FILENAME $ARCHIVEDIR
      else
