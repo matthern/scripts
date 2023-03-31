@@ -15,7 +15,7 @@ function upload {
      RET=$?
      if [ "$RET" = 0 ]; then
          echo "$FILEDIR/$FILENAME has been transferred to ANZ $REMOTE_SERVER:$REMOTEDIR" | tee -a $LOGFILE 2>&1
-         echo "Moving $FILEDIR/$FILENAME to xlam archive directory" | tee -a $LOGFILE 2>&1
+         echo "Moving $FILEDIR/$FILENAME to archive location: $ARCHIVEDIR" | tee -a $LOGFILE 2>&1
          mv $FILENAME $ARCHIVEDIR
      else
          echo "Transfer of $FILEDIR/$FILENAME FAILED on `date` $LOGFILE"
@@ -36,6 +36,6 @@ REMOTE_USER=
 REMOTE_SERVER=
 REMOTEDIR=
 ARCHIVEDIR=
-echo "Uploading $FILEDIR/$FILENAME to ANZ Live sftp server $REMOTE_SERVER..." | tee -a $LOGFILE 2>&1
+echo "Uploading $FILEDIR/$FILENAME to $REMOTE_SERVER:$REMOTEDIR..." | tee -a $LOGFILE 2>&1
 upload
       
