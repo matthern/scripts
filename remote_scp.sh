@@ -4,7 +4,7 @@
 #   Script Name: remote_scp.sh												#
 #        Author: m2m														#
 #       Created: 30/03/2023													#
-#       Purpose: This script uploads files to XLAM xi server.				#
+#       Purpose: This script uploads files to remote server.				#
 #               															# 
 #===========================================================================#
 
