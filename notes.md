@@ -16,7 +16,7 @@ Install wireguard as client:
     7  ls
     8  wg pubkey < privatekey > publickey
     9  ls
-   10  vi wg0.conf
+	10  vi wg0.conf
    11  cat privatekey
    12  vi wg0.conf
    13  sudo wg-quick up wg0
