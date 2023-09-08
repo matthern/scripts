@@ -7,19 +7,23 @@ Install wireguard as client:
        sudo apt-get install wireguard
 
 
-    1  cd /etc/wireguard/
-    2  ls
-    3  clear
-    4  w
-    5  umask 077
-    6  wg genkey > privatekey
-    7  ls
-    8  wg pubkey < privatekey > publickey
-    9  ls
+	1  cd /etc/wireguard/
+	2  ls
+	3  clear
+	4  w
+	5  umask 077
+	6  wg genkey > privatekey
+	7  ls
+	8  wg pubkey < privatekey > publickey
+	9  ls
 	10  vi wg0.conf
-   11  cat privatekey
-   12  vi wg0.conf
-   13  sudo wg-quick up wg0
+   	11  cat privatekey
+	12  vi wg0.conf
+	13  sudo wg-quick up wg0
+
+Example for wg conf:
+
+	/etc/wireguard/wg0.conf
 
 	[Interface]
 	PrivateKey = somekey 
